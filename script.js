@@ -18,9 +18,14 @@ var confirm_attendee = function() {
     var email = $('body').data('email');
     // Use form value if they changed it.
     var name = $('#form-name').val();
+    var year = $('#form-year').val();
+    var course = $('#form-course').val();
+
     $.post(ATTENDEE_SAVE_URL, {
         email: email,
-        name: name
+        name: name,
+        year: year,
+        course: course
     }, print_func);
 };
 
