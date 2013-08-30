@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dir = dirname(__FILE__);
     exec("$dir/ldaps $athena mitDirStudentYear cn ou", $output_arr);
     $name = "";
-    $year = "";
-    $course = "";
+    $year = "1";
+    $course = "UNDECLARED MAJOR";
     foreach ($output_arr as $line) {
         $name_prefix = "cn: ";
         $year_prefix = "mitDirStudentYear: ";
